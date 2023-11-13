@@ -15,6 +15,7 @@
         <v-tab to="/login"  v-if ="!isLoggedIn">Login</v-tab>
         <v-tab to ="/register"  v-if ="!isLoggedIn">Register</v-tab>
         <v-tab to ="/add-product"  v-if ="isLoggedIn">Add Product</v-tab>
+        <v-tab to ="/"  v-if ="isLoggedIn">Product List</v-tab>
         <v-tab @click="logout" v-if="isLoggedIn">Logout</v-tab>
       </v-tabs>
       </v-app-bar>

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import LoginForm from '@/components/LoginForm.vue';
 import RegisterForm from '@/components/RegisterForm.vue';
 import AddProduct from '@/components/AddProduct';
+import ProductList from '@/components/ProductList';
 
 Vue.use(VueRouter);
 const routes = [
@@ -23,9 +24,15 @@ const routes = [
         path:'/add-product',
         name:'AddProduct',
         component: AddProduct,
-        meta:{public: false} //mark this route as public
+        meta:{public: false} //mark this route as private
     },
-
+    
+    {
+        path:'/',
+        name:'ProductList',
+        component: ProductList,
+        meta:{public: false} //mark this route as private
+    },
 ];
 
 const router = new VueRouter({

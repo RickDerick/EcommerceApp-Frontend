@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LoginForm from '@/components/LoginForm.vue';
 import RegisterForm from '@/components/RegisterForm.vue';
+import AddProduct from '@/components/AddProduct';
 
 Vue.use(VueRouter);
 const routes = [
@@ -16,6 +17,13 @@ const routes = [
         name:'Register',
         component: RegisterForm,
         meta:{public: true} //mark this route as public
+    },
+
+    {
+        path:'/add-product',
+        name:'AddProduct',
+        component: AddProduct,
+        meta:{public: false} //mark this route as public
     },
 
 ];

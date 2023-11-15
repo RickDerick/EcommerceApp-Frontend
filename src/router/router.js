@@ -5,6 +5,8 @@ import RegisterForm from '@/components/RegisterForm';
 import AddProduct from '@/components/AddProduct';
 import ProductList from '@/components/ProductList';
 import EditProduct from '@/components/EditProduct'
+import ProductDetail from '@/components/ProductDetail'
+
 Vue.use(VueRouter);
 const routes = [
     {
@@ -33,6 +35,12 @@ const routes = [
         component: EditProduct,
         meta:{public: false} //mark this route as private
     },
+    {
+        path: '/product/:id',
+        name: 'ProductDetail',
+        component: ProductDetail,
+        meta: { public: false } // Mark this route as private
+        },
     
     {
         path:'/',

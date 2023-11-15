@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import LoginForm from '@/components/LoginForm.vue';
-import RegisterForm from '@/components/RegisterForm.vue';
+import LoginForm from '@/components/LoginForm';
+import RegisterForm from '@/components/RegisterForm';
 import AddProduct from '@/components/AddProduct';
 import ProductList from '@/components/ProductList';
-
+import EditProduct from '@/components/EditProduct'
 Vue.use(VueRouter);
 const routes = [
     {
@@ -24,6 +24,13 @@ const routes = [
         path:'/add-product',
         name:'AddProduct',
         component: AddProduct,
+        meta:{public: false} //mark this route as private
+    },
+    
+    {
+        path:'/edit-product:id',
+        name:'EditProduct',
+        component: EditProduct,
         meta:{public: false} //mark this route as private
     },
     

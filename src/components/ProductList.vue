@@ -11,6 +11,10 @@
     <!-- Container for action links -->
     <div class="action-links">
     
+        <router-link class="edit-link" :to="{ name: 'EditProduct', params: { id: product.id } }">Edit</router-link>
+
+<!-- Link to view product details -->
+<router-link class="details-link" :to="{ name: 'ProductDetails', params: { id: product.id } }">View Details</router-link>
     <!-- Button to delete the product -->
     <!-- Use Vue's 'v-on' directive (shorthand '@') to bind the click event with the 'deleteProduct' method -->
     <button class="delete-button" @click="deleteProduct(product.id)">Delete</button>
